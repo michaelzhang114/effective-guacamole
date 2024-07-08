@@ -1,0 +1,24 @@
+.container {
+	font-size: 0.875rem;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.imgContainer {
+	width: 0.9375rem;
+	height: 0.9375rem;
+	position: relative;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	gap: 0.625rem;
+}
+
+.icon {
+	opacity: 0.6;
+	cursor: pointer;
+}
