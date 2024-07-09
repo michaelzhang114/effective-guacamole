@@ -1,0 +1,40 @@
+.container {
+	display: flex;
+	align-items: center;
+	gap: 6.25rem;
+}
+
+.item {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 3.125rem;
+}
+
+.img {
+	width: 100%;
+	height: 31.25rem;
+	object-fit: cover;
+}
+
+.title {
+	font-size: 4.5rem;
+	background: linear-gradient(to bottom, green, grey);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.description {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.button {
+	padding: 20px;
+	cursor: pointer;
+	background-color: greenyellow;
+	border: none;
+	border-radius: 0.3125rem;
+	width: max-content;
+	color: white;
+}

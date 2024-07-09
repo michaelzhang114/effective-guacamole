@@ -1,3 +1,28 @@
-.contact {
-	background-color: red;
+.container {
+	margin: 0 auto;
+}
+
+.title {
+	font-size: 70px;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	gap: 100px;
+}
+
+.imgContainer {
+	flex: 1;
+	height: 500px;
+	width: 100%;
+	position: relative;
+}
+
+.image {
+	object-fit: contain;
+}
+
+.form {
+	flex: 1;
 }
