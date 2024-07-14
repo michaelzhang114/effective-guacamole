@@ -4,7 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 async function getData() {
-	const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+	//TODO - this is bad. I'm hardcoding local url and fetching api from a server component - i shouldn't even need to make an API call
+	const res = await fetch("http://localhost:3000/api/posts", {
 		cache: "no-store",
 	});
 
@@ -16,14 +17,19 @@ async function getData() {
 
 const Blog = async () => {
 	const data = await getData();
+	console.log(data);
 
 	return (
 		<div className={styles.mainContainer}>
 			{data.map((i) => (
-				<Link href={`/blog/${i.id}`} className={styles.container}>
+				<Link
+					href={`/blog/${i._id}`}
+					className={styles.container}
+					key={i.id}
+				>
 					<div className={styles.imageContainer}>
 						<Image
-							src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg"
+							src={i.img}
 							alt=""
 							width={400}
 							height={250}

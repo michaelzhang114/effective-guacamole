@@ -1,0 +1,11 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3.75rem;
+	border: 3px solid red;
+}
+
+.wrapper {
+	/* background: #000; */
+}

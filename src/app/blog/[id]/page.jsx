@@ -2,12 +2,10 @@ import { notFound } from "next/navigation";
 import React from "react";
 
 async function getData(id) {
-	const res = await fetch(
-		`https://jsonplaceholder.typicode.com/posts/${id}`,
-		{
-			cache: "no-store",
-		}
-	);
+	//TODO
+	const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+		cache: "no-store",
+	});
 
 	if (!res.ok) {
 		return notFound();

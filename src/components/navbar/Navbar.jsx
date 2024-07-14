@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./navbar.module.css";
+import Image from "next/image";
 
 const links = [
 	{
@@ -40,9 +41,10 @@ const links = [
 const Navbar = () => {
 	return (
 		<div className={styles.container}>
-			<Link href="/" className={styles.logo}>
-				Logo
-			</Link>
+			<div className={styles.logo}>
+				<Link href="/">Logo</Link>
+			</div>
+
 			<div className={styles.links}>
 				{links.map((link) => (
 					<Link href={link.url} key={link.id} className={styles.link}>
