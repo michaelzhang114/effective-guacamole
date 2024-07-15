@@ -1,6 +1,7 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
+
+import { useSession } from "next-auth/react";
 
 const Dashboard = () => {
 	const [data, setData] = useState([]);
@@ -30,7 +31,9 @@ const Dashboard = () => {
 		getData();
 	}, []);
 
-	console.log(data);
+	// console.log(data);
+	const { data: session, status } = useSession();
+	console.log(session);
 
 	return <div>Dashboard</div>;
 };
